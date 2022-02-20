@@ -1,0 +1,14 @@
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.user * {
+    flex-basis: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

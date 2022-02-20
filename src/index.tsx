@@ -1,25 +1,39 @@
 import ReactDOM from 'react-dom';
+import './index.css'
 
-function Index() {
+const users = [
+	{
+		id: 1,
+		name: 'Jack Bauer',
+		email: 'jack.bauer@ctu.gov',
+		phone: '+358509283928'
+	},
+	{
+		id: 2,
+		name: 'Tony Almeida',
+		email: 'tony.almeida@ctu.gov',
+		phone: '+358508829378'
+	},
+	{
+		id: 3,
+		name: "Chloe O'brian asdfesfssdfleflsdflllkjljljlk",
+		email: 'chloe.obrian@ctu.gov',
+		phone: '+358508899012'
+	}
+];
+
+function List() {
 	return (
-        <>
-            <header>
-                <h1>Hello World</h1>
-            </header>
-            <main>
-                <section>
-                    <h2>About me</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus voluptas laborum nostrum nam asperiores! Odio, mollitia id aspernatur sint saepe dignissimos perferendis officia reiciendis vitae amet, voluptas, alias aliquam ut laborum tempore. Enim mollitia dolores accusamus quod beatae vitae a esse doloribus quidem, sed amet magni. Asperiores praesentium necessitatibus numquam odit deserunt molestias minus non impedit pariatur nam! Mollitia expedita numquam facere dolore maiores quis, nam dignissimos inventore velit! Vel culpa sit atque molestiae praesentium delectus quam at exercitationem. Atque, aperiam debitis? Assumenda corporis quaerat suscipit est consequatur laboriosam aliquid omnis cum tempore incidunt, earum nostrum animi, odit repudiandae pariatur!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus ipsam distinctio magni quisquam totam nisi necessitatibus, aliquid iusto corrupti quam, amet nostrum nemo excepturi atque autem odit sunt. Molestias architecto facilis temporibus? Dolorum exercitationem molestias recusandae saepe, veniam ab!</p>
-                </section>
-                <section>
-                    <h2>Contact</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus voluptas laborum nostrum nam asperiores! Odio, mollitia id aspernatur sint saepe dignissimos perferendis officia reiciendis vitae amet, voluptas, alias aliquam ut laborum tempore. Enim mollitia dolores accusamus quod beatae vitae a esse doloribus quidem, sed amet magni. Asperiores praesentium necessitatibus numquam odit deserunt molestias minus non impedit pariatur nam! Mollitia expedita numquam facere dolore maiores quis, nam dignissimos inventore velit! Vel culpa sit atque molestiae praesentium delectus quam at exercitationem. Atque, aperiam debitis? Assumenda corporis quaerat suscipit est consequatur laboriosam aliquid omnis cum tempore incidunt, earum nostrum animi, odit repudiandae pariatur!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis delectus ipsam distinctio magni quisquam totam nisi necessitatibus, aliquid iusto corrupti quam, amet nostrum nemo excepturi atque autem odit sunt. Molestias architecto facilis temporibus? Dolorum exercitationem molestias recusandae saepe, veniam ab!</p>
-                </section>
-            </main>
-        </>
-    );
+		<>
+			{users.map((user) => (
+				<section className='user' key={user.id}>
+					<h2>{user.name}</h2>
+					<p>{user.email}</p>
+					<p>{user.phone}</p>
+				</section>
+			))}
+		</>
+	);
 }
 
-ReactDOM.render(<Index />, document.querySelector('#root'));
+ReactDOM.render(<List />, document.querySelector('#root'));
