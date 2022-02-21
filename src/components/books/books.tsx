@@ -1,17 +1,35 @@
+import { ReactNode } from 'react'
 import './books.css'
 
-export function Book() {
+type BookProps = {
+	children?: ReactNode;
+	img: string;
+	title: string;
+	author: string;
+	rating: string;
+	price: string;
+	rank: string;
+}
+
+export function Book({
+	img,
+	title,
+	author,
+	rating,
+	price,
+	rank
+}:BookProps) {
     return (
-        <div className="card">
-			<img src="https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL.jpg" alt="Atomic Habits" />
-			<a href="#">Atomic Habits</a>
+        <article className="card">
+			<img src={img} alt="Atomic Habits" />
+			<a href="#">{title}</a>
 			<a href="#">
-				<span>James Clear</span>
+				<span>{author}</span>
 			</a>
-			<span>Rating: 3</span>
-			<span>$4.99</span>
+			<span>{rating}</span>
+			<span>${price}</span>
 			<span className="rank"></span>
-			<span className='rank-value'>#11</span>
-		</div>
+			<span className='rank-value'>#{rank}</span>
+		</article>
     )
 }
