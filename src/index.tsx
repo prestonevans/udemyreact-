@@ -1,38 +1,18 @@
 import ReactDOM from 'react-dom';
-import './index.css'
-
-const users = [
-	{
-		id: 1,
-		name: 'Jack Bauer',
-		email: 'jack.bauer@ctu.gov',
-		phone: '+358509283928'
-	},
-	{
-		id: 2,
-		name: 'Tony Almeida',
-		email: 'tony.almeida@ctu.gov',
-		phone: '+358508829378'
-	},
-	{
-		id: 3,
-		name: "Chloe O'brian asdfesfssdfleflsdflllkjljljlk",
-		email: 'chloe.obrian@ctu.gov',
-		phone: '+358508899012'
-	}
-];
+import './index.css';
 
 function List() {
 	return (
-		<>
-			{users.map((user) => (
-				<section className='user' key={user.id}>
-					<h2>{user.name}</h2>
-					<p>{user.email}</p>
-					<p>{user.phone}</p>
-				</section>
-			))}
-		</>
+		<div className="card">
+			<img src="https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL.jpg" alt="Atomic Habits" />
+			<a href="#">Atomic Habits</a>
+			<a href="#">
+				<span>James Clear</span>
+			</a>
+			<span>Rating: 3</span>
+			<span>$4.99</span>
+			<span className="rank"># 1</span>
+		</div>
 	);
 }
 

@@ -1,14 +1,25 @@
-
-.user {
+.card {
     display: flex;
-    align-items: center;
-    gap: 0 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.user * {
-    flex-basis: 10rem;
+    width: fit-content;
+    flex-direction: column;
+    border: thin solid black;
+    padding: 3rem;
+    position: relative;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    gap: .25rem;
+    font-size: 1.25rem;
+}
+.card img {
+    width: 20vw;
+    height: 20vw;
+    object-fit: contain;
+}
+.rank {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    padding: .25em 1em .25em 2em;
+    background-color: #BC4C05;
+    color: white;
+    transform: skew(-30deg);
 }
