@@ -1,0 +1,31 @@
+.card {
+    flex: 300px;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    border: thin solid black;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    gap: .25rem;
+    font-size: 1.25rem;
+}
+.card img {
+    width: 100%;
+}
+.rank {
+    position: absolute;
+    height: 2rem;
+    width: 5rem;
+    top: 0;
+    left: -1em;
+    background-color: #BC4C05;
+    color: white;
+    transform: skew(-30deg);
+}
+.rank-value {
+    position: absolute;
+    color: white;
+    top: .25rem;
+    left: .75rem;
+}
