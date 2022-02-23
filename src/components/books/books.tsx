@@ -19,6 +19,9 @@ export function Book({
 	price,
 	rank
 }:BookProps) {
+	function onClickHandler() {
+		console.log(author)
+	}
     return (
         <article className="card">
 			<img src={img} alt={title} />
@@ -30,6 +33,7 @@ export function Book({
 			<span>${price}</span>
 			<span className="rank"></span>
 			<span className='rank-value'>#{rank}</span>
+			<button type='button' onClick={onClickHandler}>Click Me</button>
 		</article>
     )
 }

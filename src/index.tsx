@@ -46,30 +46,30 @@ const bookList = [
 	}
 ];
 
-// function List() {
-// 	return (
-// 		<section>
-// 			{bookList.map((book, i) => {
-// 				return (
-// 					<Book {...book} key={`${book.rank}${i}`}/>
-// 				);
-// 			})}
-// 		</section>
-// 	);
-// }
-
 function List() {
-	const [tooltip, setTooltip] = useState(false)
-
-	function onFocusNameHandler() {
-		setTooltip(!tooltip)
-	}
 	return (
-		<main>
-			<span className={tooltip ? 'show' : 'hide'}>Here is a tooltip</span>
-			<input onBlur={onFocusNameHandler} onFocus={onFocusNameHandler} type="text" />
-		</main>
-	)
+		<section>
+			{bookList.map((book, i) => {
+				return (
+					<Book {...book} key={`${book.rank}${i}`}/>
+				);
+			})}
+		</section>
+	);
 }
+
+// function List() {
+// 	const [tooltip, setTooltip] = useState(false)
+
+// 	function onFocusNameHandler() {
+// 		setTooltip(!tooltip)
+// 	}
+// 	return (
+// 		<main>
+// 			<span className={tooltip ? 'show' : 'hide'}>Here is a tooltip</span>
+// 			<input onBlur={onFocusNameHandler} onFocus={onFocusNameHandler} type="text" />
+// 		</main>
+// 	)
+// }
 
 ReactDOM.render(<List />, document.querySelector('#root'));
