@@ -21,7 +21,7 @@ export function Book({
 }:BookProps) {
     return (
         <article className="card">
-			<img src={img} alt="Atomic Habits" />
+			<img src={img} alt={title} />
 			<a href="#">{title}</a>
 			<a href="#">
 				<span>{author}</span>
