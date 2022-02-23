@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Book } from './components/books/books';
 import './index.css';
@@ -45,16 +46,30 @@ const bookList = [
 	}
 ];
 
+// function List() {
+// 	return (
+// 		<section>
+// 			{bookList.map((book, i) => {
+// 				return (
+// 					<Book {...book} key={`${book.rank}${i}`}/>
+// 				);
+// 			})}
+// 		</section>
+// 	);
+// }
+
 function List() {
+	const [tooltip, setTooltip] = useState(false)
+
+	function onFocusNameHandler() {
+		setTooltip(!tooltip)
+	}
 	return (
-		<section>
-			{bookList.map((book, i) => {
-				return (
-					<Book {...book} key={`${book.rank}${i}`}/>
-				);
-			})}
-		</section>
-	);
+		<main>
+			<span className={tooltip ? 'show' : 'hide'}>Here is a tooltip</span>
+			<input onBlur={onFocusNameHandler} onFocus={onFocusNameHandler} type="text" />
+		</main>
+	)
 }
 
 ReactDOM.render(<List />, document.querySelector('#root'));

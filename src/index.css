@@ -6,3 +6,9 @@ section {
     box-sizing: border-box;
     margin: 0 auto;
 }
+.hide {
+    visibility: hidden;
+}
+.show {
+    visibility: visible;
+}
